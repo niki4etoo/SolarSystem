@@ -27,14 +27,14 @@ function draw() {
 
   // Earth
   var time = new Date();
-  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  ctx.rotate(((12 * Math.PI) / 60) * time.getSeconds() + ((12 * Math.PI) / 60000) * time.getMilliseconds());
   ctx.translate(200, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
   ctx.drawImage(earth, -12, -12);
 
   // Moon
   ctx.save();
-  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  ctx.rotate(((6 * Math.PI) / 6) * time.getSeconds() + ((6 * Math.PI) / 6000) * time.getMilliseconds());
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
